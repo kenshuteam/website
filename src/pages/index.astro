@@ -1,0 +1,31 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<body class="bg-[#f0f0f0] flex items-end text-neutral-700">
+		<nav class="absolute top-0 right-0 text-right p-16 text-lg underline ">
+			<ol>
+				<li>members -</li>
+				<li>audits -</li>
+				<li>blogs -</li>
+			</ol>
+		</nav>
+
+		<div class="w-full flex h-1/2">
+			<div class="flex-1" />
+			<main class="flex-1 border-l border-l-black px-16">
+				<h1 class="text-6xl leading-none tracking-tight mb-6">
+					<span class="opacity-50">we are</span><br />
+					Kenshū.
+				</h1>
+				<h2 class="text-4xl leadning-none tracking-tight font-light w-3/4">We conduct thorough audits that proactively block potential breaches, securing your systems before any threat can take root.</h2>
+			</main>
+		</div>
+	</body>
+</html>
