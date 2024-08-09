@@ -19,8 +19,8 @@ const posts = (await getCollection('blog')).sort(
 			<div class="w-full md:w-1/2 flex flex-row">
 				<a class="pl-8 pt-8 md:pl-24 md:pt-24 flex items-end justify-end border-r border-r-neutral-700 dark:border-r-neutral-200 hover:bg-neutral-700 hover:text-neutral-200 dark:hover:bg-neutral-200 dark:hover:text-neutral-700 text-2xl leading-5 font-bold tracking-tight" href="./">Kenshū</a>
 				<div class="flex-1 flex flex-row items-end justify-end space-x-8">
-					<a class="leading-5 text-2xl" href="/team">our team</a>
-					<a class="leading-5 text-2xl" href="/audit">audit</a>
+					<a class="leading-5 text-lg md:text-2xl md:leading-5" href="/team">our team</a>
+					<a class="leading-5 text-lg md:text-2xl md:leading-5" href="/audit">audit</a>
 				</div>
 			</div>
 
@@ -28,10 +28,10 @@ const posts = (await getCollection('blog')).sort(
 		</nav>
 
 		<main class="w-full h-full flex flex-col lg:flex-row">
-			<div class="flex flex-col lg:flex-row w-full lg:w-1/2 items-start justify-start p-8 md:p-24">
+			<div class="flex flex-col lg:flex-row w-full items-start justify-start p-8 md:p-24">
 				<div class="flex flex-col items-start lg:items-end w-min mr-40 mb-4">
-					<header class="text-5xl sm:text-6xl font-bold tracking-tight whitespace-nowrap">Blog</header>
-					<p class="text-5xl sm:text-6xl font-bold select-none" aria-hidden>-</p>
+					<header class="text-4xl sm:text-6xl font-bold tracking-tight whitespace-nowrap">Blog</header>
+					<p class="text-4xl sm:text-6xl font-bold select-none" aria-hidden>-</p>
 				</div>
 
 				<section>
@@ -40,7 +40,7 @@ const posts = (await getCollection('blog')).sort(
 							posts.map((post) => (
 								<li>
 									<a class="underline" href={`/blog/${post.slug}/`}>
-										<h4 class="text-xl font-bold">{post.data.title}</h4>
+										<h4 class="text-lg md:text-xl font-bold">{post.data.title}</h4>
 										<p class="opacity-50">
 											<FormattedDate date={post.data.pubDate} />
 										</p>
@@ -50,9 +50,6 @@ const posts = (await getCollection('blog')).sort(
 						}
 					</ul>
 				</section>
-			</div>
-
-			<div class="hidden lg:w-1/2 lg:border-l lg:border-l-neutral-700 dark:lg:border-l-neutral-200 pr-8 md:pt-24 md:pl-0">
 			</div>
 		</main>
 	</body>
