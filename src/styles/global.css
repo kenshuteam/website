@@ -78,3 +78,8 @@ body {
   word-wrap: break-word;
   overflow-wrap: break-word;
 }
+@media (prefers-color-scheme: dark) {
+  body {
+    background-image: url("./bg-dark.svg");
+  }
+}
