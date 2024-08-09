@@ -63,7 +63,7 @@ html {
   height: 100%;
 }
 
-nav li:hover::after {
+nav li:hover:not(.active)::after {
   content: ">";
 }
 
