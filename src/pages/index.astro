@@ -3,8 +3,7 @@ import BaseHead from '../components/BaseHead.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 ---
 
-<!doctype html>
-<html lang="en">
+<!doctype html> <html lang="en">
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 	</head>
@@ -18,7 +17,49 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 		</nav>
 
 		<div class="w-full flex min-h-1/2">
-			<div class="flex-1 hidden lg:block" />
+			<div class="flex-1 hidden lg:block">
+				<div class="spin-container border border-neutral-300 dark:border-neutral-600">
+					<div class="item">
+						<a href="https://midday.ai">
+							<img src="./logos/midday.svg" class="dark:invert object-contain" alt="midday" />
+						</a>
+					</div>
+					<div class="item">
+						<a href="https://microsoft.com">
+							<picture>
+								<source srcset="./logos/microsoft-logo-light.png" media="(prefers-color-scheme: divght)"/>
+								<source srcset="./logos/microsoft-logo-dark.png"  media="(prefers-color-scheme: dark)"/>
+								<img src="./logos/microsoft-logo-light.png" class="w-24 object-contain" alt="Microsoft" />
+							</picture>
+						</a>
+					</div>
+					<div class="item">
+						<a href="https://paypal.com">
+							<picture>
+								<source srcset="./logos/paypal-logo-light.png" media="(prefers-color-scheme: divght)"/>
+								<source srcset="./logos/paypal-logo-dark.png"  media="(prefers-color-scheme: dark)"/>
+								<img src="./logos/paypal-logo-light.png" class="w-24 object-contain" alt="PayPal" />
+							</picture>
+						</a>
+					</div>
+					<div class="item">
+						<a href="https://a16z.com">
+							<img src="./logos/a16z.png" class="h-10" color="black" alt="a16z" />
+						</a>
+					</div>
+					<div class="item">
+						<a href="https://krea.ai">
+							<img src="./logos/krea.svg" class="invert dark:invert-0 h-10" alt="krea" />
+						</a>
+					</div>
+					<div class="item">
+						<a href="https://puter.com">
+							<img src="./logos/puter.png" class="h-10" alt="Puter" />
+						</a>
+					</div>
+				</div>
+			</div>
+
 			<main class="flex-1 lg:border-l border-l-black dark:border-l-neutral-300 px-8 lg:px-16">
 				<h1 class="text-5xl sm:text-6xl leading-none tracking-tight mb-6">
 					<span class="opacity-40">we are</span><br />
@@ -29,3 +70,42 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 		</div>
 	</body>
 </html>
+<style>
+	.spin-container {
+		--n: 6;   /* number of item */
+		--d: 60s; /* duration */
+		--size: 600px;
+
+		width: 400px;
+		height: 400px;
+		margin: 40px auto;
+		display: grid;
+		grid-template-columns: 200px;
+		grid-template-rows: 100px;
+		place-content: center;
+		border-radius: 50%;
+	}
+	.item {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		grid-area:1/1;
+		line-height: 30px;
+		text-align: center;
+		border-radius: 50%;
+		animation: spin var(--d) linear infinite;
+		transform: rotate(0) translate(200px) rotate(0);
+	}
+	@keyframes spin {
+		100% {
+			transform: rotate(1turn) translate(200px) rotate(-1turn);
+		}
+	}
+
+	.item:nth-child(1) {animation-delay:calc(-0*var(--d)/var(--n))}
+	.item:nth-child(2) {animation-delay:calc(-1*var(--d)/var(--n))}
+	.item:nth-child(3) {animation-delay:calc(-2*var(--d)/var(--n))}
+	.item:nth-child(4) {animation-delay:calc(-3*var(--d)/var(--n))}
+	.item:nth-child(5) {animation-delay:calc(-4*var(--d)/var(--n))}
+	.item:nth-child(6) {animation-delay:calc(-5*var(--d)/var(--n))}
+</style>
