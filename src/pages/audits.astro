@@ -1,75 +1,149 @@
 ---
-import BaseHead from "../components/BaseHead.astro"
-import Member from "../components/Member.astro"
-import { SITE_TITLE, SITE_DESCRIPTION } from "../consts"
+import BaseHead from "../components/BaseHead.astro";
+import Member from "../components/Member.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 ---
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-	</head>
+    <head>
+        <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+    </head>
 
-	<body class="bg-[#f0f0f0] flex flex-col text-neutral-700 dark:text-neutral-200">
-		<nav class="flex border-b border-b-neutral-700 dark:border-b-neutral-200">
-			<div class="w-full md:w-1/2 flex flex-row">
-				<a class="pl-8 pt-8 md:pl-24 md:pt-24 flex items-end justify-end border-r border-r-neutral-700 dark:border-r-neutral-200 hover:bg-neutral-700 hover:text-neutral-200 dark:hover:bg-neutral-200 dark:hover:text-neutral-700 text-2xl leading-5 font-bold tracking-tight" href="./">Kenshū</a>
-				<div class="flex-1 flex flex-row items-end justify-end space-x-8">
-					<a class="text-lg leading-4 md:text-2xl md:leading-5" href="./team">our team</a>
-					<a class="text-lg leading-4 md:text-2xl md:leading-5" href="./blog">blogs</a>
-				</div>
-			</div>
+    <body
+        class="bg-[#f0f0f0] flex flex-col text-neutral-700 dark:text-neutral-200"
+    >
+        <nav
+            class="flex border-b border-b-neutral-700 dark:border-b-neutral-200"
+        >
+            <div class="w-full md:w-1/2 flex flex-row">
+                <a
+                    class="pl-8 pt-8 md:pl-24 md:pt-24 flex items-end justify-end border-r border-r-neutral-700 dark:border-r-neutral-200 hover:bg-neutral-700 hover:text-neutral-200 dark:hover:bg-neutral-200 dark:hover:text-neutral-700 text-2xl leading-5 font-bold tracking-tight"
+                    href="./">Kenshū</a
+                >
+                <div
+                    class="flex-1 flex flex-row items-end justify-end space-x-8"
+                >
+                    <a
+                        class="text-lg leading-4 md:text-2xl md:leading-5"
+                        href="./team">our team</a
+                    >
+                    <a
+                        class="text-lg leading-4 md:text-2xl md:leading-5"
+                        href="./blog">blogs</a
+                    >
+                </div>
+            </div>
 
-			<div class="hidden md:block md:w-1/2 lg:border-l lg:border-l-neutral-700 dark:lg:border-l-neutral-200" />
-		</nav>
- 
-		<main class="w-full h-full flex flex-col lg:flex-row items-start justify-start p-8 pt-12 md:p-24">
-			<div class="flex flex-col items-start lg:items-end lg:w-min lg:mr-40 mb-20">
-				<header class="text-4xl leading-4 sm:text-6xl sm:leading-4 font-bold tracking-tighter lg:whitespace-nowrap">Past audits</header>
-				<p class="text-4xl sm:text-6xl font-bold select-none" aria-hidden="true">-</p>
-				<h2 class="text-lg lg:text-2xl font-light lg:text-right leading-none">We have worked in reporting and auditing infra for these companies.</h2>
-				<p class="text-lg leading-3 font-bold select-none" aria-hidden="true">-</p>
-			</div>
-			<ul class="flex flex-wrap gap-14 items-center justify-center">
-				<li>
-					<a href="https://midday.ai">
-						<img src="./logos/midday.svg" class="dark:invert h-11" alt="midday" />
-					</a>
-				</li>
-				<li>
-					<a href="https://microsoft.com">
-						<picture>
-							<source srcset="./logos/microsoft-logo-light.png" media="(prefers-color-scheme: light)"/>
-							<source srcset="./logos/microsoft-logo-dark.png"  media="(prefers-color-scheme: dark)"/>
-							<img src="./logos/microsoft-logo-light.png" class="h-10" alt="Microsoft" />
-						</picture>
-					</a>
-				</li>
-				<li>
-					<a href="https://paypal.com">
-						<picture>
-							<source srcset="./logos/paypal-logo-light.png" media="(prefers-color-scheme: light)"/>
-							<source srcset="./logos/paypal-logo-dark.png"  media="(prefers-color-scheme: dark)"/>
-							<img src="./logos/paypal-logo-light.png" class="h-10" alt="PayPal" />
-						</picture>
-					</a>
-				</li>
-				<li>
-					<a href="https://a16z.com">
-						<img src="./logos/a16z.png" class="h-10" color="black" alt="a16z" />
-					</a>
-				</li>
-				<li>
-					<a href="https://krea.ai">
-						<img src="./logos/krea.svg" class="invert dark:invert-0 h-10" alt="krea" />
-					</a>
-				</li>
-				<li>
-					<a href="https://puter.com">
-						<img src="./logos/puter.png" class="h-10" alt="Puter" />
-					</a>
-				</li>
-			</ul>
-		</main>
-	</body>
+            <div
+                class="hidden md:block md:w-1/2 lg:border-l lg:border-l-neutral-700 dark:lg:border-l-neutral-200"
+            >
+            </div>
+        </nav>
+
+        <main
+            class="w-full h-full flex flex-col lg:flex-row items-start justify-start p-8 pt-12 md:p-24"
+        >
+            <div
+                class="flex flex-col items-start lg:items-end lg:w-min lg:mr-40 mb-20"
+            >
+                <header
+                    class="text-4xl leading-4 sm:text-6xl sm:leading-4 font-bold tracking-tighter lg:whitespace-nowrap"
+                >
+                    Past audits
+                </header>
+                <p
+                    class="text-4xl sm:text-6xl font-bold select-none"
+                    aria-hidden="true"
+                >
+                    -
+                </p>
+                <h2
+                    class="text-lg lg:text-2xl font-light lg:text-right leading-none"
+                >
+                    We have worked in reporting and auditing infra for multiple
+                    trusted companies.
+                </h2>
+                <p
+                    class="text-lg leading-3 font-bold select-none"
+                    aria-hidden="true"
+                >
+                    -
+                </p>
+            </div>
+            <ul class="flex flex-wrap gap-14 items-center justify-center">
+                <li>
+                    <a href="https://midday.ai">
+                        <img
+                            src="./logos/midday.svg"
+                            class="dark:invert h-11"
+                            alt="midday"
+                        />
+                    </a>
+                </li>
+                <li>
+                    <a href="https://microsoft.com">
+                        <picture>
+                            <source
+                                srcset="./logos/microsoft-logo-light.png"
+                                media="(prefers-color-scheme: light)"
+                            />
+                            <source
+                                srcset="./logos/microsoft-logo-dark.png"
+                                media="(prefers-color-scheme: dark)"
+                            />
+                            <img
+                                src="./logos/microsoft-logo-light.png"
+                                class="h-10"
+                                alt="Microsoft"
+                            />
+                        </picture>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://paypal.com">
+                        <picture>
+                            <source
+                                srcset="./logos/paypal-logo-light.png"
+                                media="(prefers-color-scheme: light)"
+                            />
+                            <source
+                                srcset="./logos/paypal-logo-dark.png"
+                                media="(prefers-color-scheme: dark)"
+                            />
+                            <img
+                                src="./logos/paypal-logo-light.png"
+                                class="h-10"
+                                alt="PayPal"
+                            />
+                        </picture>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://a16z.com">
+                        <img
+                            src="./logos/a16z.png"
+                            class="h-10"
+                            color="black"
+                            alt="a16z"
+                        />
+                    </a>
+                </li>
+                <li>
+                    <a href="https://krea.ai">
+                        <img
+                            src="./logos/krea.svg"
+                            class="invert dark:invert-0 h-10"
+                            alt="krea"
+                        />
+                    </a>
+                </li>
+                <li>
+                    <a href="https://puter.com">
+                        <img src="./logos/puter.png" class="h-10" alt="Puter" />
+                    </a>
+                </li>
+            </ul>
+        </main>
+    </body>
 </html>
